@@ -1,12 +1,10 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-const filename = () => {
+export const filename = () => {
   return fileURLToPath(import.meta.url);
 }
 
-const dirname = () => {
+export const dirname = () => {
   return path.dirname(fileURLToPath(import.meta.url));
 }
-
-export { filename, dirname };
