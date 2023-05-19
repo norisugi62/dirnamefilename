@@ -6,7 +6,10 @@ const filename = () => {
 }
 
 const dirname = () => {
-  return path.dirname(filename());
+  const fn = filename();
+  return path.dirname(fn);
 }
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export { filename, dirname };
